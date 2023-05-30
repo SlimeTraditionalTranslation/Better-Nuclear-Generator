@@ -5,7 +5,7 @@ name: BetterReactor
 author: CAPS123987
 
 ## CHANGE this to a meaninful but short description of your plugin.
-description: A generic Slimefun4-Addon
+description: 黏液科技附加「更好的反應爐」繁體中文版。
 
 ## CHANGE this to the path of the class that extends JavaPlugin.
 main: me.CAPS123987.BetterReactor.BetterReactor

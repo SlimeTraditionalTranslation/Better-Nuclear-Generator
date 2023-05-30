@@ -34,6 +34,7 @@ import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import net.md_5.bungee.api.ChatColor;
+import org.mini2Dx.gettext.GetText;
 
 public class ReactorOutput extends SimpleSlimefunItem<BlockTicker> implements ETInventoryBlock{
 	private static final int[] inputs = {};
@@ -114,7 +115,7 @@ public class ReactorOutput extends SimpleSlimefunItem<BlockTicker> implements ET
 					}
 				}
 				if(found == false) {
-					e.getPlayer().sendMessage(ChatColor.RED+"No Reactor Core found");
+					e.getPlayer().sendMessage(ChatColor.RED+ GetText.tr("No Reactor Core found"));
 					BlockStorage.clearBlockInfo(b);
 					e.setCancelled(true);
 				}

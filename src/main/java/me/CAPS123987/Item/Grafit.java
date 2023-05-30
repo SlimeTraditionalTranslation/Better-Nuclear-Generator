@@ -11,6 +11,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.UnplaceableBlock;
 import me.CAPS123987.BetterReactor.BetterReactor;
+import org.mini2Dx.gettext.GetText;
 
 public class Grafit extends UnplaceableBlock implements GEOResource{
 	public Grafit() {
@@ -39,7 +40,7 @@ public class Grafit extends UnplaceableBlock implements GEOResource{
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		return "Grafit";
+		return GetText.tr("Grafit");
 	}
 
 	@Override

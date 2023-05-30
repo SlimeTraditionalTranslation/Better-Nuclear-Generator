@@ -1,8 +1,13 @@
 package me.CAPS123987.BetterReactor;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.LinkedHashMap;
+import java.util.Locale;
 import java.util.Map;
 
+import io.github.bakedlibs.dough.updater.GitHubBuildsUpdaterTR;
+import org.antlr.v4.runtime.misc.ParseCancellationException;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -26,6 +31,8 @@ import me.CAPS123987.Item.Grafit;
 import me.CAPS123987.Item.Items;
 import me.CAPS123987.Utils.Methodes;
 import me.CAPS123987.machines.SuperFreezer;
+import org.mini2Dx.gettext.GetText;
+import org.mini2Dx.gettext.PoFile;
 
 public class BetterReactor extends JavaPlugin implements SlimefunAddon {
 	public static BetterReactor instance;
@@ -36,12 +43,30 @@ public class BetterReactor extends JavaPlugin implements SlimefunAddon {
         // Read something from your config.yml
         Config cfg = new Config(this);
 
-        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("DEV - ")) {
+        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("EFI - ")) {
         	
-        	GitHubBuildsUpdater
-        	updater = new GitHubBuildsUpdater(this, this.getFile(), "CAPS123987/Better-Nuclear-Generator/master");
+        	GitHubBuildsUpdaterTR
+        	updater = new GitHubBuildsUpdaterTR(this, this.getFile(), "SlimeTraditionalTranslation/Better-Nuclear-Generator/master");
         	updater.start();
         	
+        }
+
+        GetText.setLocale(Locale.TRADITIONAL_CHINESE);
+        InputStream inputStream = getClass().getResourceAsStream("/translations/zh_tw.po");
+        if (inputStream == null) {
+            getLogger().severe("錯誤！無法找到翻譯檔案，請回報給翻譯者。");
+            getServer().getPluginManager().disablePlugin(this);
+            return;
+        } else {
+            getLogger().info("載入繁體翻譯檔案...");
+            try {
+                PoFile poFile = new PoFile(Locale.TRADITIONAL_CHINESE, inputStream);
+                GetText.add(poFile);
+            } catch (ParseCancellationException | IOException e) {
+                getLogger().severe("錯誤！讀取翻譯時發生錯誤，請回報給翻譯者：" + e.getMessage());
+                getServer().getPluginManager().disablePlugin(this);
+                return;
+            }
         }
         
         instance = this;

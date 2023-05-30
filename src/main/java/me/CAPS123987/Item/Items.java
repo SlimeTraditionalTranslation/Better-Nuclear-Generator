@@ -18,6 +18,7 @@ import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
 import me.CAPS123987.BetterReactor.BetterReactor;
 import me.CAPS123987.IIIDmultiblock.ReactorCore;
 import net.md_5.bungee.api.ChatColor;
+import org.mini2Dx.gettext.GetText;
 
 public class Items {
 	
@@ -25,80 +26,80 @@ public class Items {
 	
 	public static final ItemGroup betterReactor = new ItemGroup(new NamespacedKey(BetterReactor.getInstance(),
 	        "Better_Reactor"),
-	        new CustomItemStack(Material.OBSIDIAN, "&dBetter Reactor")
+	        new CustomItemStack(Material.OBSIDIAN, GetText.tr("&dBetter Reactor"))
 	    );
 	
 	public static final SlimefunItemStack REACTOR_CORE = new SlimefunItemStack("REACTOR_CORE",
 			Material.MAGENTA_GLAZED_TERRACOTTA,
-	        ChatColor.RESET+"Reactor Core",
+	        ChatColor.RESET+ GetText.tr("Reactor Core"),
 	        "",
 	        LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR),
 	        LoreBuilder.powerBuffer(4096),
 	        LoreBuilder.powerPerSecond(4096),
-	        "&8\u21E8 &e\u26A1 &7"+"Lasts "+ReactorCore.burnTime/2+"s",
-	        "&8\u21E8 &e\u26A1 &7"+"In total: 2.04M J",
-	        "&7Core of Reactor, &bshows Reactor Core Hologram"
+	        "&8\u21E8 &e\u26A1 &7"+GetText.tr("Lasts ")+ReactorCore.burnTime/2+GetText.tr("s"),
+	        "&8\u21E8 &e\u26A1 &7"+GetText.tr("In total: 2.04M J"),
+	        GetText.tr("&7Core of Reactor, &bshows Reactor Core Hologram")
 	    );
 	public static final SlimefunItemStack HEATED_COOLANT = new SlimefunItemStack("HEATED_COOLANT",
 			"de4073be40cb3deb310a0be959b4cac68e825372728fafb6c2973e4e7c33",
-	        ChatColor.RESET+"Heated Coolant",
+	        ChatColor.RESET+GetText.tr("Heated Coolant"),
 	        ""
 	    );
 	
 	
 	public static final SlimefunItemStack SUPER_FREEZER = new SlimefunItemStack("SUPER_FREEZER",
 			Material.QUARTZ_BLOCK,
-	        ChatColor.RESET+"Super Freezer",
+	        ChatColor.RESET+GetText.tr("Super Freezer"),
 	        "",
-	        "&7(&cWarning!&7 more inputs needed for good flow of items)",
-	        "&7Water instantly to coolant",
+	        GetText.tr("&7(&cWarning!&7 more inputs needed for good flow of items)"),
+	        GetText.tr("&7Water instantly to coolant"),
 	        LoreBuilder.powerPerSecond(50)
 	    );
 	
 	public static final SlimefunItemStack LEAD_BLOCK = new SlimefunItemStack("LEAD_BLOCK",
 			Material.IRON_BLOCK,
-	        ChatColor.RESET+"Lead Block",
+	        ChatColor.RESET+GetText.tr("Lead Block"),
 	        "",
-	        "&fWhite &7in &bReactor Core Hologram"
+	        GetText.tr("&fWhite &7in &bReactor Core Hologram")
 	    );
 	
 	public static final SlimefunItemStack LEAD_GLASS = new SlimefunItemStack("LEAD_GLASS",
 			Material.GRAY_STAINED_GLASS,
-			ChatColor.RESET+"Lead Glass",
+			ChatColor.RESET+GetText.tr("Lead Glass"),
 	        "",
-	        "&7Gray in &bReactor Core Hologram"
+	        GetText.tr("&7Gray in &bReactor Core Hologram")
 	    );
 	
 	public static final SlimefunItemStack BORIUM_ROD = new SlimefunItemStack("BORIUM_ROD",
 			Material.ANCIENT_DEBRIS,
-			ChatColor.RESET+"Borium Rod",
+			ChatColor.RESET+GetText.tr("Borium Rod"),
 	        "",
-	        "&6Orange &7in &bReactor Core Hologram"
+	        GetText.tr("&6Orange &7in &bReactor Core Hologram")
 	    );
 	
 	public static final SlimefunItemStack BORIUM = new SlimefunItemStack("BORIUM",
 			Material.GUNPOWDER,
-			ChatColor.RESET+"Borium",
+			ChatColor.RESET+GetText.tr("Borium"),
 	        ""
 	    );
 	public static final SlimefunItemStack REACTOR_INPUT = new SlimefunItemStack("REACTOR_INPUT",
 			Material.LIGHT_BLUE_WOOL,
-	        ChatColor.RESET+"Reactor Input",
+	        ChatColor.RESET+GetText.tr("Reactor Input"),
 	        "",
-	        "&9Blue &7in &bReactor Core Hologram"
+	        GetText.tr("&9Blue &7in &bReactor Core Hologram")
 	    );
 	public static final SlimefunItemStack REACTOR_OUTPUT = new SlimefunItemStack("REACTOR_OUTPUT",
 			Material.RED_WOOL,
-			ChatColor.RESET+"Reactor Output",
+			ChatColor.RESET+GetText.tr("Reactor Output"),
 	        "",
-	        "&cRed &7in &bReactor Core Hologram"
+	        GetText.tr("&cRed &7in &bReactor Core Hologram")
 	    );
 	//https://minecraft-heads.com/custom-heads/miscellaneous/50973-fancy-cube
 	public static final SlimefunItemStack REACTOR_HATCH = new SlimefunItemStack("REACTOR_HATCH",
 			"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWU4MzI4NDE2MDdkZjc2ZWM1NjE5MGVhODdjMzE2MDUwYTI3N2E1YTU4ZjFkM2JjODJhMGU5NGVkYjk1MzUzIn19fQ==",
-			ChatColor.RESET+"Reactor Hatch",
+			ChatColor.RESET+GetText.tr("Reactor Hatch"),
 	        "",
-	        "&aGreen &7in &bReactor Core Hologram"
+	        GetText.tr("&aGreen &7in &bReactor Core Hologram")
 	    );
 	
 	
