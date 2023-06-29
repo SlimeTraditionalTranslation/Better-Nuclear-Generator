@@ -18,7 +18,7 @@ public class Grafit extends UnplaceableBlock implements GEOResource{
         super(Items.betterReactor, Items.BORIUM, RecipeType.GEO_MINER, new ItemStack[0]);
         register();
     }
-	private final NamespacedKey key = new NamespacedKey(BetterReactor.getInstance(), "grafit");
+	private final NamespacedKey key = new NamespacedKey(BetterReactor.getInstance(), "Borium");
 	@Override
 	public NamespacedKey getKey() {
 		// TODO Auto-generated method stub
@@ -40,7 +40,7 @@ public class Grafit extends UnplaceableBlock implements GEOResource{
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		return GetText.tr("Grafit");
+		return GetText.tr("Borium");
 	}
 
 	@Override

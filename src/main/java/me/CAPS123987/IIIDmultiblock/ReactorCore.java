@@ -15,6 +15,7 @@ import org.bukkit.Particle.DustOptions;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.Directional;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.AreaEffectCloud;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Creeper;
 import org.bukkit.entity.EntityType;
@@ -26,6 +27,8 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.material.MaterialData;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.Vector;
 
 import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
@@ -177,38 +180,39 @@ public class ReactorCore extends SimpleSlimefunItem<BlockTicker> implements Ener
 		long el = uranPer*power;
 		
 		if(isRunning(b)) {
-			int tick = ticks.get(b.getLocation());
-			
-			if(tick==1) {
-				menu.pushItem(new CustomItemStack(SlimefunItems.PLUTONIUM,1), outputuran);
-			}
-			long temperature = Math.round(((Double.valueOf(uran500.get(b.getLocation())))/Double.valueOf(coolantPer))*5500.0);
-			long tempe = temp.get(b.getLocation());
-			
-			
-			if(coolant_out==64||uran_out==64||tempe>maxTemp) {
-				expolode(b);
-				ticks.remove(b.getLocation());
+			if(b.getChunk().isLoaded()) {
+				int tick = ticks.get(b.getLocation());
 				
-			}else {
-				if(tempe<temperature) {
-					temp.replace(b.getLocation(), tempe+((temperature-tempe)/20));
+				if(tick==1) {
+					menu.pushItem(new CustomItemStack(SlimefunItems.PLUTONIUM,1), outputuran);
 				}
-				if(tempe>temperature) {
-					temp.replace(b.getLocation(), tempe-((tempe-temperature)/10));
-				}
+				long temperature = Math.round(((Double.valueOf(uran500.get(b.getLocation())))/Double.valueOf(coolantPer))*5500.0);
+				long tempe = temp.get(b.getLocation());
 				
-				ticks.replace(b.getLocation(), tick-1);
-				addCharge(b.getLocation(),(int)el);
-				if(!hasCoolant(b)) {
-					temp.replace(b.getLocation(), tempe+200);
+				
+				if(coolant_out==64||uran_out==64||tempe>maxTemp) {
+					expolode(b);
+					ticks.remove(b.getLocation());
+					
 				}else {
-					BlockStorage.addBlockInfo(b,"coolant", String.valueOf(coolant-coolantPer));
+					if(tempe<temperature) {
+						temp.replace(b.getLocation(), tempe+((temperature-tempe)/20));
+					}
+					if(tempe>temperature) {
+						temp.replace(b.getLocation(), tempe-((tempe-temperature)/10));
+					}
+					
+					ticks.replace(b.getLocation(), tick-1);
+					addCharge(b.getLocation(),(int)el);
+					if(!hasCoolant(b)) {
+						temp.replace(b.getLocation(), tempe+200);
+					}else {
+						BlockStorage.addBlockInfo(b,"coolant", String.valueOf(coolant-coolantPer));
+					}
+					menu.pushItem(new CustomItemStack(Items.HEATED_COOLANT,(int)Math.round(coolantPer/2)), outputcoolant);
+					
 				}
-				menu.pushItem(new CustomItemStack(Items.HEATED_COOLANT,(int)Math.round(coolantPer/2)), outputcoolant);
-				
 			}
-			
 			return;
 		}
 		if(!hasFuel(b)) {
@@ -244,7 +248,7 @@ public class ReactorCore extends SimpleSlimefunItem<BlockTicker> implements Ener
 				creeper.ignite();
 				creeper.setExplosionRadius(127);
 				creeper.setGravity(false);
-				
+				creeper.setFuseTicks(0);
 				
 			}
 		}
@@ -259,6 +263,29 @@ public class ReactorCore extends SimpleSlimefunItem<BlockTicker> implements Ener
 				}
 			}
 		}
+		
+		BetterReactor.instance.getServer().getScheduler().runTaskLater(BetterReactor.instance, new Runnable() {
+
+			@Override
+			public void run() {
+				for(int x = -46;x<49;x=x+4) {
+					for(int z = -46;z<49;z=z+4) {
+						Location Loc = b.getLocation().clone().add(x, 0, z);
+						
+						Location AreaLoc = Loc.getWorld().getHighestBlockAt(Loc).getLocation();
+						
+						AreaEffectCloud Area = (AreaEffectCloud) AreaLoc.getWorld().spawnEntity(AreaLoc, EntityType.AREA_EFFECT_CLOUD);
+						
+						Area.addCustomEffect(new PotionEffect(PotionEffectType.HARM,5,2), true);
+						Area.setDuration(36000);
+						Area.setParticle(Particle.CRIT);
+					}
+				}
+			}
+			
+		}, 80L);
+		
+		
 		Bukkit.broadcastMessage(GetText.tr("Boom"));
 	}
 	public void updateStatus(int time,BlockMenu menu, int coolant_out, int uran_out, Player p,Block b,int coolantPer,int uranPer, boolean isRunning) {
@@ -363,7 +390,7 @@ public class ReactorCore extends SimpleSlimefunItem<BlockTicker> implements Ener
 				return false;
 			});
 			
-			menu.replaceExistingItem(uran_status, new CustomItemStack(SlimefunItems.URANIUM,GetText.tr("&cFuel Status: &4")+String.valueOf(percent)+"%","",GetText.tr("&r&fCurrent uran per 500s: &7")+String.valueOf(uranPer),GetText.tr("&r&fLeft Click: &7+1"), GetText.tr("&r&fRight Click: &7+1")));
+			menu.replaceExistingItem(uran_status, new CustomItemStack(SlimefunItems.URANIUM,GetText.tr("&cFuel Status: &4")+String.valueOf(percent)+"%",GetText.tr("&r&fCurrent uran per 500s: &7")+String.valueOf(uranPer),GetText.tr("&r&fLeft Click: &7+1"), GetText.tr("&r&fRight Click: &7+1")));
 		}
 	}
 	
