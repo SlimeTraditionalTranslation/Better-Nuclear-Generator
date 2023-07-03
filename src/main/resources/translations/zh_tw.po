@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: slimetranslations\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-29 14:39+0000\n"
-"PO-Revision-Date: 2023-06-29 14:42\n"
+"POT-Creation-Date: 2023-07-03 19:11+0000\n"
+"PO-Revision-Date: 2023-07-03 19:17\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
@@ -22,184 +22,190 @@ msgstr ""
 msgid "No Reactor Core found"
 msgstr "未找到反應爐核心"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:289
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:154
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:319
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:325
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:331
+msgid "[REACTOR]"
+msgstr "[反應爐]"
+
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:154
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:319
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:325
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:331
+msgid " Reactor at"
+msgstr " 反應爐在"
+
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:156
+msgid " LEAKED"
+msgstr " 已洩漏"
+
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:309
 msgid "Boom"
 msgstr "爆炸"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:292
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:312
 msgid "Remaining Time: "
 msgstr "剩餘時間："
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:292
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:312
 #: src/main/java/me/CAPS123987/Item/Items.java:39
 msgid "s"
 msgstr " 秒"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:295
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:315
 msgid "Is Running: "
 msgstr "正在運轉："
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:298
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:318
 msgid "Heated Coolant in output"
 msgstr "已加熱冷卻單元在輸出口"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:299
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:305
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:311
-msgid "[REACTOR]"
-msgstr "[反應爐]"
-
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:299
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:305
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:311
-msgid " Reactor at"
-msgstr " 反應爐在"
-
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:300
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:306
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:312
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:320
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:326
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:332
 msgid " x: "
 msgstr " x："
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:300
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:306
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:312
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:320
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:326
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:332
 msgid " y: "
 msgstr " y："
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:300
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:306
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:312
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:320
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:326
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:332
 msgid " z: "
 msgstr " z："
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:301
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:307
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:321
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:327
 msgid " has "
 msgstr " 有"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:301
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:321
 msgid " coolant in output"
 msgstr "冷卻單元在輸出口"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:304
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:324
 msgid "Uran waste in output"
 msgstr "鈾的副產物在輸出口"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:307
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:327
 msgid " uran waste in output"
 msgstr "鈾的副產物在輸出口"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:310
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:330
 msgid "High heat"
 msgstr "過熱"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:313
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:333
 msgid " has High heat!"
 msgstr " 過熱！"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:316
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:336
 msgid "Coolant Per Tick: "
 msgstr "每刻消耗的冷卻單元："
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:317
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:337
 msgid "Uran Per 500s: "
 msgstr "每 500 秒消耗的鈾："
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:320
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:340
 msgid "->Current Uran Per 500s: "
 msgstr "-> 目前每 500 秒消耗的鈾："
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:321
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:341
 msgid "->Current temperature: "
 msgstr "-> 目前溫度："
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:323
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:343
 msgid "->Current power: "
 msgstr "-> 目前能量："
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:328
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:348
 msgid "Estimated temperature: "
 msgstr "估計溫度："
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:330
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:350
 msgid "Estimated power: "
 msgstr "估計能量："
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:367
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:387
 msgid "&bCoolant Status: &9"
 msgstr "&b冷卻狀態：&9"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:367
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:387
 msgid "&r&fCurrent coolant per tick: &7"
 msgstr "&r&f目前冷卻每刻消耗：&7"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:367
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:393
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:387
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:413
 msgid "&r&fLeft Click: &7+1"
 msgstr "&r&f左鍵：&7+1"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:367
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:387
 msgid "&r&fRight Click: &7-1"
 msgstr "&r&f右鍵：&7-1"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:393
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:413
 msgid "&cFuel Status: &4"
 msgstr "&c燃料狀態：&4"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:393
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:413
 msgid "&r&fCurrent uran per 500s: &7"
 msgstr "&r&f目前每 500 秒消耗的鈾：&7"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:393
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:413
 msgid "&r&fRight Click: &7+1"
 msgstr "&r&f右鍵：&7+1"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:531
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:551
 msgid "Status"
 msgstr "狀態"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:535
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:555
 msgid "Multiblock complete "
 msgstr "多方塊結構完成 "
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:537
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:557
 msgid "Multiblock not complete "
 msgstr "多方塊結構未完成 "
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:538
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:558
 msgid "(Click to show "
 msgstr "（點擊顯示"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:538
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:558
 msgid "Reactor Core Hologram"
 msgstr "反應爐核心全像投影圖"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:538
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:558
 msgid ")"
 msgstr "）"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:566
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:586
 msgid "Reactor Built"
 msgstr "反應爐建置"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:713
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:733
 msgid "&bCoolant Slot"
 msgstr "&b冷卻槽"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:713
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:733
 msgid "&fThis Slot accepts Coolant Cells"
 msgstr "&f這個欄位可放入冷卻單元"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:715
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:735
 msgid "&7Fuel Slot"
 msgstr "&7燃料槽"
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:715
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:735
 msgid "&fThis Slot accepts radioactive Fuel such as:"
 msgstr "&f這個欄位可放入放射性燃料："
 
-#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:715
+#: src/main/java/me/CAPS123987/IIIDmultiblock/ReactorCore.java:735
 msgid "&2Uranium"
 msgstr "&2鈾"
 

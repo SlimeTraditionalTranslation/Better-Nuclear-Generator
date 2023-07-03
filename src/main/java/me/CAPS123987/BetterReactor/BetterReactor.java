@@ -43,7 +43,7 @@ public class BetterReactor extends JavaPlugin implements SlimefunAddon {
         // Read something from your config.yml
         Config cfg = new Config(this);
 
-        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("EFI - ")) {
+        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("Build_STCT - ")) {
         	
         	GitHubBuildsUpdaterTR
         	updater = new GitHubBuildsUpdaterTR(this, this.getFile(), "SlimeTraditionalTranslation/Better-Nuclear-Generator/master");
